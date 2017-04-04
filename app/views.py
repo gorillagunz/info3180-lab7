@@ -30,7 +30,7 @@ def thumbnail():
 ###
 @app.route('/thumbnails/view')
 def thumbs():
-    render_template('thumbnails.html')
+    render_template('thumbnails.html',info=thumbnail())
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
     """Send your static text file."""
